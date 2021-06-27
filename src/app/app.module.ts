@@ -1,18 +1,24 @@
+import { OverlayModule } from "@angular/cdk/overlay";
 import { NgModule } from '@angular/core';
+import { MatCardModule } from "@angular/material/card";
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';
+import { AppGlobalOverlay } from './global-overlay/global-overlay.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppGlobalOverlay
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    OverlayModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
